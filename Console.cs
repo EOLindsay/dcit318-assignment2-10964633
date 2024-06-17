@@ -78,7 +78,7 @@ class Bicycle : IMovable
 {
     public void Move()
     {
-        Console.WriteLine("Bicycle is moving")
+        Console.WriteLine("Bicycle is moving");
     }
 }
 class Program
