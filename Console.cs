@@ -59,6 +59,28 @@ class Rectangle : Shape
         return length * width;
     }
 }
+
+// Interfaces
+interface IMovable
+{
+    void Move();
+}
+// 1st class implementing the interface
+class Car : IMovable
+{
+    public void Move()
+    {
+        Console.WriteLine("Car is moving");
+    }
+}
+// 2nd class implementing the interface
+class Bicycle : IMovable
+{
+    public void Move()
+    {
+        Console.WriteLine("Bicycle is moving")
+    }
+}
 class Program
 {
     static void Main(string[] args)
@@ -72,15 +94,18 @@ class Program
         dog.MakeSound();
         cat.MakeSound();
 
-        Console.WriteLine();
-
         // Abstract Classes and Methods
         Circle circle = new Circle(7.0);
         Rectangle rectangle = new Rectangle(5.0, 7.0);
 
         Console.WriteLine($"Circle area: {circle.GetArea()}");
         Console.WriteLine($"Rectangle area: {rectangle.GetArea()}");
-
-        Console.WriteLine();
+        
+        // Interfaces
+        Car car = new Car();
+        Bicycle bicycle = new Bicycle();
+        
+        car.Move();
+        bicycle.Move();
     }
 }
